@@ -5,5 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frases</title>
   </head>
-  <body></body>
+  <body>
+    <script src="./app/services/FraseApi.js"></script>
+    <script src="./app/helper/TradutorFrase.js"></script>
+    <script>
+      (async () => {
+        const fraseApi = new FraseApi();
+        const resultado = await fraseApi.obterFrase();
+        console.log(resultado);
+      })();
+    </script>
+  </body>
 </html>
