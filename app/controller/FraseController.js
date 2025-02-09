@@ -1,5 +1,9 @@
+const _dadosPrivados = new WeakMap();
+
 class FraseController {
   constructor(frase, id) {
+    _dadosPrivados.set(this, { frase, id });
+
     // Informações
     this._frase = frase;
     this._id = id;
