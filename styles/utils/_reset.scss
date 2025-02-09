@@ -1,3 +1,5 @@
+@use "./mixins" as *;
+
 /* 
  * https://github.com/jtrost/Complete-CSS-Reset
 */
@@ -188,4 +190,35 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+/* Adjust scss */
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  @include displayFlex(center, center);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+p {
+  @include aplyFont(400, 1rem);
+}
+
+h1 {
+  @include aplyFont(600, 1rem);
+}
+
+h2 {
+  @include aplyFont(500, 1rem);
 }
