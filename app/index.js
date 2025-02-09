@@ -1,8 +1,8 @@
 (async () => {
   const fraseApi = new FraseApi();
   const resultado = await fraseApi.obterFrase();
-  console.log(resultado);
-
+  const frase = resultado.frase;
+  const id = resultado.id;
   // Controller
-  const fraseController = new FraseController(fraseApi);
+  const fraseController = new FraseController(frase, id);
 })();
