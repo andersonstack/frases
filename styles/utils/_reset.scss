@@ -1,4 +1,5 @@
 @use "./mixins" as *;
+@use "./variaveis" as *;
 
 /* 
  * https://github.com/jtrost/Complete-CSS-Reset
@@ -199,10 +200,13 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: $cor-primaria;
 }
 
 nav {
-  @include displayFlex(center, center);
+  @include displayFlex(center, space-between);
+  margin: 1rem 0;
+  padding: 1rem 0;
 }
 
 *,
@@ -212,13 +216,31 @@ nav {
 }
 
 p {
-  @include aplyFont(400, 1rem);
+  @include aplyFont(400, 1rem, $cor-quaternaria);
 }
 
 h1 {
-  @include aplyFont(600, 1rem);
+  @include aplyFont(600, 2rem, $cor-quaternaria);
 }
 
 h2 {
-  @include aplyFont(500, 1rem);
+  @include aplyFont(500, 1rem, $cor-quaternaria);
+}
+
+button {
+  cursor: pointer;
+  @include aplyFont(600, 1rem, $cor-primaria);
+  padding: 1rem;
+  background-color: black;
+  border-radius: 0.5rem;
+}
+
+ul {
+  @include displayFlex(center, space-between, 1rem, column);
+  margin: 1rem 0;
+}
+
+li {
+  @include aplyFont(400, 1rem, $cor-quaternaria);
+  padding: 1rem;
 }
