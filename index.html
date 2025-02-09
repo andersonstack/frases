@@ -6,10 +6,35 @@
     <title>Frases</title>
   </head>
   <body>
+    <!-- Nav Bar -->
+    <nav class="navegacao">
+      <h1>Frases</h1>
+      <button class="button-reload navegacoes__buttons" id="reload">
+        Recarregar
+      </button>
+      <button class="button-about navegacoes__buttons" id="about">Sobre</button>
+      <button class="button-contact navegacoes__buttons" id="contacts">
+        Contatos
+      </button>
+    </nav>
+
+    <!-- Frase Principal -->
     <div id="frase">
       <button class="salvar" id="salvar">Salvar</button>
     </div>
-    <ul id="lista"></ul>
+
+    <!-- Lista de frases -->
+    <ul id="lista">
+      <li>
+        Frase 1
+        <div class="acoes">
+          <button class="apagar" id="1">Apagar</button>
+          <button class="visualizar" id="1">Visualizar</button>
+        </div>
+      </li>
+    </ul>
+
+    <!-- Scripts da aplicação -->
     <script src="./app/services/FraseApi.js"></script>
     <script src="./app/helper/TradutorFrase.js"></script>
     <script src="./app/controller/FraseController.js"></script>
