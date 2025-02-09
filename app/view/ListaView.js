@@ -1,15 +1,13 @@
 class ListaView {
-  constructor(lista, frase, id) {
+  constructor(lista) {
     this._lista = lista;
-    this._frase = frase;
-    this._id = id;
   }
 
-  _template() {
-    return `<li class="frase" id="${this._id}">${this._frase}</li>`;
+  _template(frase, id) {
+    return `<li class="frase" id="${id}">${frase}</li>`;
   }
 
-  update(model) {
-    this._lista.innerHTML += this._template();
+  update(frase, id) {
+    this._lista.innerHTML += this._template(frase, id);
   }
 }
