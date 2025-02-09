@@ -31,11 +31,15 @@ class FraseController {
     if (this._btnSalvar) {
       document.querySelector("#frase").addEventListener("click", (event) => {
         if (event.target.id === "salvar") {
-          console.log("Clicou no botão!");
+          this._salvar();
         }
       });
     } else {
       console.error("Botão 'Salvar' não encontrado no DOM!");
     }
+  }
+
+  _salvar() {
+    this._listaView.update(this._frase, this._id);
   }
 }
