@@ -450,7 +450,7 @@ li {
   opacity: 0;
   animation: aparecerSuavemente 0.8s ease-out forwards;
   overflow: auto;
-  max-height: 20rem;
+  max-height: 35rem;
 }
 
 .lista::-webkit-scrollbar {
@@ -487,6 +487,11 @@ li {
   width: 50%;
 }
 
+@media screen and (min-width: 720px) {
+  .lista {
+    max-height: 20rem;
+  }
+}
 footer {
   display: none;
 }
