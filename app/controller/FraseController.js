@@ -15,6 +15,17 @@ class FraseController {
     this._fraseHtml = $("#frase");
     this._fraseLista = $("#lista");
     this._btnSalvar = $("#salvar");
+    this._btnAbout = $("#about");
+    this._btnContacts = $("#contacts");
+
+    this._btnAbout.addEventListener("click", () => {
+      const aboutMobile = $(".about-mobile");
+      aboutMobile.classList.toggle("expanded");
+    });
+    this._btnContacts.addEventListener("click", () => {
+      const aboutMobile = $(".contact-mobile");
+      aboutMobile.classList.toggle("expanded");
+    });
 
     // Instância da View - frase principal
     this._fraseView = new FraseView(this._fraseHtml, this._frase, this._id);
@@ -29,7 +40,7 @@ class FraseController {
 
   _adicionarEvento() {
     if (this._btnSalvar) {
-      document.querySelector("#salvar").addEventListener("click", (event) => {
+      $("#salvar").addEventListener("click", (event) => {
         if (event.target.id === "salvar") {
           this._salvar();
         }
