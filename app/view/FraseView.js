@@ -6,10 +6,23 @@ class FraseView {
   }
 
   _template() {
-    return `<p class="frase" id="${this._id}">${this._frase}</p>`;
+    let texto = "";
+
+    let fraseElemento = `<p class="frase" id=${this._id}></p>`;
+
+    this._elemento.innterHTML += fraseElemento;
+
+    this._frase.split("").forEach((l, i) =>
+      setTimeout(() => {
+        texto += l;
+        document.getElementById(this._id).textContent = texto;
+      }, i * 50)
+    );
+
+    return fraseElemento;
   }
 
-  update(model) {
+  update() {
     this._elemento.innerHTML += this._template();
   }
 }
