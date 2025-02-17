@@ -7,8 +7,14 @@ class ListaView {
     return `
       <li class="frase-lista" id="${id}">${frase} 
         <div class="acoes">
-          <button class="apagar" id="${id}">Apagar</button>
-          <button class="visualizar" id="${id}">Visualizar</button>
+          <button class="apagar" id="${id}">
+            <img src="../../assets/delete.svg" />
+            <p>Apagar</p>
+          </button>
+          <button class="visualizar" id="${id}">
+            <img src="../../assets/view.png" />
+            <p>Visualizar</p>
+          </button>
         </div>
       </li>`;
   }
