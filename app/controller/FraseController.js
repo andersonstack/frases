@@ -29,7 +29,7 @@ class FraseController {
 
   _adicionarEvento() {
     if (this._btnSalvar) {
-      document.querySelector("#frase").addEventListener("click", (event) => {
+      document.querySelector("#salvar").addEventListener("click", (event) => {
         if (event.target.id === "salvar") {
           this._salvar();
         }

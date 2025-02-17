@@ -4,23 +4,29 @@ class ListaView {
   }
 
   _template(frase, id) {
-    return `
-      <li class="frase-lista" id="${id}">
-        <h2 class="frase-principal">${frase}</h2> 
-        <div class="acoes">
-          <button class="apagar" id="${id}">
-            <img src="../../assets/delete.svg" />
-            <p>Apagar</p>
-          </button>
-          <button class="visualizar" id="${id}">
-            <img src="../../assets/view.png" />
-            <p>Visualizar</p>
-          </button>
-        </div>
-      </li>`;
+    const li = document.createElement("li");
+    li.classList.add("frase-lista");
+    li.id = id;
+
+    li.innerHTML = `
+      <h2 class="frase-principal">${frase}</h2> 
+      <div class="acoes">
+        <button class="apagar" id="${id}">
+          <img src="../../assets/delete.svg" />
+          <p>Apagar</p>
+        </button>
+        <button class="visualizar" id="${id}">
+          <img src="../../assets/view.png" />
+          <p>Visualizar</p>
+        </button>
+      </div>
+    `;
+
+    return li;
   }
 
   update(frase, id) {
-    this._lista.innerHTML += this._template(frase, id);
+    const novoItem = this._template(frase, id);
+    this._lista.appendChild(novoItem); // Adiciona o novo item como filho da lista
   }
 }

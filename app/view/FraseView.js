@@ -23,6 +23,6 @@ class FraseView {
   }
 
   update() {
-    this._elemento.innerHTML += this._template();
+    this._elemento.innerHTML = this._template();
   }
 }

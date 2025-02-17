@@ -447,8 +447,6 @@ li {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  opacity: 0;
-  animation: aparecerSuavemente 0.8s ease-out forwards;
   overflow: auto;
   max-height: 35rem;
 }
@@ -485,6 +483,11 @@ li {
 
 .frase-principal {
   width: 50%;
+}
+
+.frase-lista {
+  opacity: 0;
+  animation: aparecerSuavemente 2s ease-in-out forwards;
 }
 
 @media screen and (min-width: 720px) {

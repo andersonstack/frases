@@ -31,9 +31,8 @@
     </nav>
 
     <!-- Frase Principal -->
-    <div id="frase" class="div-principal">
-      <button class="salvar" id="salvar">Salvar</button>
-    </div>
+    <div id="frase" class="div-principal"></div>
+    <button class="salvar" id="salvar">Salvar</button>
 
     <!-- Lista de frases -->
     <ul id="lista" class="lista"></ul>
@@ -61,6 +60,15 @@
     <script src="./app/controller/FraseController.js"></script>
     <script src="./app/view/FraseView.js"></script>
     <script src="./app/view/ListaView.js"></script>
+    <script src="./app/controller/ReloadController.js"></script>
     <script src="./app/index.js"></script>
+
+    <script>
+      let btn = document
+        .querySelector("#reload")
+        .addEventListener("click", async () => {
+          await ReloadController.recarregar();
+        });
+    </script>
   </body>
 </html>
