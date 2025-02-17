@@ -1,0 +1,44 @@
+@use "../utils/mixins" as *;
+@use "../utils/variaveis" as *;
+
+footer {
+  display: none;
+}
+
+@media screen and (min-width: 720px) {
+  footer {
+    @include displayFlex(space-between, center);
+    overflow: hidden;
+    padding: 1rem;
+
+    h2 {
+      @include aplyFont(700, 1rem);
+    }
+
+    a {
+      @include aplyFont(400, 0.7rem);
+    }
+
+    p {
+      @include aplyFont(400, 0.7rem);
+    }
+  }
+
+  .direitos {
+    @include displayFlex(space-between, center, 1rem);
+
+    img {
+      width: 1rem;
+      height: auto;
+    }
+  }
+
+  .contatos {
+    @include displayFlex(space-between, center, 1rem, column);
+    overflow: hidden;
+  }
+
+  .reference {
+    color: $cor-quaternaria;
+  }
+}
