@@ -651,7 +651,7 @@ footer {
   margin: 0;
   width: 100%; /* Define o tamanho desejado */
   height: 25vh; /* Expande até o meio da tela */
-  top: 10%; /* Move para o centro da tela verticalmente */
+  top: 15%; /* Move para o centro da tela verticalmente */
 }
 .about-mobile::before, .contact-mobile::before {
   content: "";
@@ -683,6 +683,15 @@ footer {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 375px) {
+  .about-mobile.expanded, .expanded.contact-mobile {
+    animation: bgColor 1s linear forwards 1;
+    margin: 0;
+    width: 100%; /* Define o tamanho desejado */
+    height: 25vh; /* Expande até o meio da tela */
+    top: 20%; /* Move para o centro da tela verticalmente */
+  }
+}
 @media screen and (min-width: 720px) {
   .about-mobile, .contact-mobile {
     display: none;

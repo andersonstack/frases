@@ -46,7 +46,7 @@
     margin: 0;
     width: 100%; /* Define o tamanho desejado */
     height: 25vh; /* Expande até o meio da tela */
-    top: 10%; /* Move para o centro da tela verticalmente */
+    top: 15%; /* Move para o centro da tela verticalmente */
   }
 
   &::before {
@@ -67,6 +67,18 @@
   a {
     @include aplyFont(400, 0.7rem);
     text-transform: uppercase;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .about-mobile {
+    &.expanded {
+      animation: bgColor 1s linear forwards 1;
+      margin: 0;
+      width: 100%; /* Define o tamanho desejado */
+      height: 25vh; /* Expande até o meio da tela */
+      top: 20%; /* Move para o centro da tela verticalmente */
+    }
   }
 }
 
