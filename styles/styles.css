@@ -264,6 +264,14 @@ li {
   padding: 1rem;
 }
 
+@keyframes rotate-click {
+  to {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
+}
 .navegacao {
   display: flex;
   justify-content: space-between;
@@ -277,8 +285,16 @@ li {
 .navegacao img {
   width: 1.5rem;
   height: 1.5rem;
+  transition: transform 0.5s ease;
 }
 
 .navegacoes__buttons {
   background-color: transparent;
+}
+
+.button-reload:hover img {
+  transform: rotate(180deg);
+}
+.button-reload:active img {
+  animation: rotate-click 2s linear 1;
 }/*# sourceMappingURL=styles.css.map */
