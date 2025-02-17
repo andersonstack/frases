@@ -262,4 +262,23 @@ li {
   font-weight: 400;
   font-size: 1rem;
   padding: 1rem;
+}
+
+.navegacao {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  margin: 1rem 1rem;
+  align-items: center;
+}
+.navegacao p {
+  display: none;
+}
+.navegacao img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.navegacoes__buttons {
+  background-color: transparent;
 }/*# sourceMappingURL=styles.css.map */

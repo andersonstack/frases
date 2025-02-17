@@ -1,0 +1,23 @@
+@use "../utils/mixins" as *;
+@use "../utils/variaveis" as *;
+
+.navegacao {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  margin: 1rem 1rem;
+  align-items: center;
+
+  p {
+    display: none;
+  }
+
+  img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.navegacoes__buttons {
+  background-color: transparent;
+}
