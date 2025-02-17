@@ -1,0 +1,81 @@
+@use "../utils/mixins" as *;
+@use "../utils/variaveis" as *;
+
+@keyframes bgColor {
+  0% {
+    background-color: #00ccbe;
+  }
+  10% {
+    background-color: #00c4b7;
+  }
+  20% {
+    background-color: #00bcae;
+  }
+  30% {
+    background-color: #00b3a8;
+  }
+  40% {
+    background-color: #00aba3;
+  }
+  50% {
+    background-color: #00a39f;
+  }
+  100% {
+    background-color: #09a6a3;
+  }
+}
+
+.about-mobile {
+  @include displayFlex(space-between, center, 1rem, column);
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  background-color: $cor-secundaria;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  align-items: center;
+  transition: width 0.5s ease, height 0.5s ease, top 0.5s ease;
+  margin: 0.1rem;
+  background-color: transparent;
+
+  &.expanded {
+    animation: bgColor 1s linear forwards 1;
+    margin: 0;
+    width: 100%; /* Define o tamanho desejado */
+    height: 25vh; /* Expande até o meio da tela */
+    top: 10%; /* Move para o centro da tela verticalmente */
+  }
+
+  &::before {
+    content: "";
+    background-color: white;
+    position: relative;
+    top: 0;
+  }
+}
+
+.ferramentas {
+  @include displayFlex(spsace-between, center, 0.5rem, column);
+}
+
+.contact-mobile {
+  @include displayFlex(space-between, center, 1rem, column);
+  @extend .about-mobile;
+  a {
+    @include aplyFont(400, 0.7rem);
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .about-mobile {
+    display: none;
+  }
+
+  .contact-mobile {
+    display: none;
+  }
+}

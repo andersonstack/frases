@@ -549,4 +549,92 @@ footer {
   .reference {
     color: #edebc9;
   }
+}
+@keyframes bgColor {
+  0% {
+    background-color: #00ccbe;
+  }
+  10% {
+    background-color: #00c4b7;
+  }
+  20% {
+    background-color: #00bcae;
+  }
+  30% {
+    background-color: #00b3a8;
+  }
+  40% {
+    background-color: #00aba3;
+  }
+  50% {
+    background-color: #00a39f;
+  }
+  100% {
+    background-color: #09a6a3;
+  }
+}
+.about-mobile, .contact-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  background-color: #09a6a3;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  align-items: center;
+  transition: width 0.5s ease, height 0.5s ease, top 0.5s ease;
+  margin: 0.1rem;
+  background-color: transparent;
+}
+.about-mobile.expanded, .expanded.contact-mobile {
+  animation: bgColor 1s linear forwards 1;
+  margin: 0;
+  width: 100%; /* Define o tamanho desejado */
+  height: 25vh; /* Expande até o meio da tela */
+  top: 10%; /* Move para o centro da tela verticalmente */
+}
+.about-mobile::before, .contact-mobile::before {
+  content: "";
+  background-color: white;
+  position: relative;
+  top: 0;
+}
+
+.ferramentas {
+  display: flex;
+  flex-direction: column;
+  justify-content: spsace-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.contact-mobile a {
+  font-family: "Poppins", sans-serif;
+  color: #000;
+  font-weight: 400;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 720px) {
+  .about-mobile, .contact-mobile {
+    display: none;
+  }
+  .contact-mobile {
+    display: none;
+  }
 }/*# sourceMappingURL=styles.css.map */
