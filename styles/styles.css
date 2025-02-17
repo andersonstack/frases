@@ -313,10 +313,58 @@ li {
   animation: rotate-click 2s linear 1;
 }
 
+.navegacoes__title {
+  font-family: "Poppins", sans-serif;
+  color: #edebc9;
+  font-weight: 600;
+  font-size: 3rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 375px) {
+  .navegacao {
+    flex-direction: column;
+  }
+}
 @media screen and (min-width: 720px) {
   .button-about,
   .button-contact {
     display: none;
+  }
+  .navegacoes__title {
+    font-family: "Poppins", sans-serif;
+    color: #edebc9;
+    font-weight: 600;
+    font-size: 3rem;
+    background: #00c4b7;
+    padding: 1rem;
+    cursor: pointer;
+  }
+  .navegacoes__title svg {
+    height: 45px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  .navegacoes__title rect {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-dasharray: 422, 0;
+    transition: all 0.35s linear;
+  }
+  .navegacoes__title:hover {
+    background: rgba(0, 204, 190, 0);
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
+  .navegacoes__title:hover rect {
+    stroke-width: 5;
+    stroke-dasharray: 15, 310;
+    stroke-dashoffset: 48;
+    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
   }
 }
 .div-principal {
