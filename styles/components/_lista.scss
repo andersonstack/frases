@@ -1,0 +1,48 @@
+@use "../utils/mixins" as *;
+@use "../utils/variaveis" as *;
+
+@keyframes aparecerSuavemente {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  25% {
+    opacity: 0.3;
+    transform: translateY(-15px);
+  }
+  50% {
+    opacity: 0.6;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.lista {
+  @include displayFlex(center, center, 1rem, column);
+  opacity: 0;
+  animation: aparecerSuavemente 0.8s ease-out forwards;
+}
+
+.frase-lista {
+  @include displayFlex(space-between, center, 1rem);
+
+  p {
+    display: none;
+  }
+
+  button {
+    background-color: transparent;
+  }
+
+  img {
+    width: 1.5rem;
+    height: auto;
+  }
+}
+
+.frase-principal {
+  width: 50%;
+}

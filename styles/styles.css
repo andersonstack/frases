@@ -370,4 +370,54 @@ li {
   background: rgba(255, 255, 255, 0.1); /* Adiciona um leve escurecimento */
   pointer-events: none; /* Permite interações normais */
   z-index: -1; /* Coloca o blur abaixo do texto */
+}
+
+@keyframes aparecerSuavemente {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  25% {
+    opacity: 0.3;
+    transform: translateY(-15px);
+  }
+  50% {
+    opacity: 0.6;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.lista {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0;
+  animation: aparecerSuavemente 0.8s ease-out forwards;
+}
+
+.frase-lista {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.frase-lista p {
+  display: none;
+}
+.frase-lista button {
+  background-color: transparent;
+}
+.frase-lista img {
+  width: 1.5rem;
+  height: auto;
+}
+
+.frase-principal {
+  width: 50%;
 }/*# sourceMappingURL=styles.css.map */

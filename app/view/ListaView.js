@@ -5,7 +5,8 @@ class ListaView {
 
   _template(frase, id) {
     return `
-      <li class="frase-lista" id="${id}">${frase} 
+      <li class="frase-lista" id="${id}">
+        <h2 class="frase-principal">${frase}</h2> 
         <div class="acoes">
           <button class="apagar" id="${id}">
             <img src="../../assets/delete.svg" />
