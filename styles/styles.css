@@ -300,6 +300,12 @@ li {
   animation: rotate-click 2s linear 1;
 }
 
+@media screen and (min-width: 720px) {
+  .button-about,
+  .button-contact {
+    display: none;
+  }
+}
 .div-principal {
   display: flex;
   flex-direction: column-reverse;
@@ -310,7 +316,7 @@ li {
 
 .salvar {
   padding: 1rem;
-  margin: 1rem;
+  margin: 1rem 0;
   width: 100%;
   text-align: center;
   border-radius: 0;
@@ -338,12 +344,14 @@ li {
   left: 0;
   width: 0%;
   height: 100%;
-  background-color: #edebc9;
   z-index: -1;
-  transition: width 0.3s ease-in-out; /* Adiciona a transição */
+  transition: width 1s ease-in-out; /* Adiciona a transição */
 }
-.salvar:hover:before, .salvar:active:before {
+.salvar:hover:before {
   width: 100%;
+}
+.salvar:active {
+  transform: scale(1.1);
 }
 
 .frase {
@@ -372,6 +380,36 @@ li {
   z-index: -1; /* Coloca o blur abaixo do texto */
 }
 
+@media screen and (min-width: 720px) {
+  .salvar:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: -2;
+  }
+  .salvar:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #edebc9;
+    z-index: -1;
+    transition: width 0.3s ease-in-out; /* Adiciona a transição */
+  }
+  .salvar:hover:before {
+    width: 100%;
+  }
+  .frase {
+    margin: 5rem;
+    font-size: 2rem;
+  }
+}
 @keyframes aparecerSuavemente {
   0% {
     opacity: 0;
