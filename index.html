@@ -16,10 +16,10 @@
     <!-- Nav Bar -->
     <nav class="navegacao">
       <h1>Frases</h1>
-      <button class="button-reload navegacoes__buttons" id="reload">
+      <!-- <button class="button-reload navegacoes__buttons" id="reload">
         <img src="./assets/reload.png" alt="reload" />
         <p>Recarregar</p>
-      </button>
+      </button> -->
       <button class="button-about navegacoes__buttons" id="about">
         <img src="./assets/about.svg" alt="about" />
         <p>Sobre</p>
@@ -36,6 +36,26 @@
 
     <!-- Lista de frases -->
     <ul id="lista" class="lista"></ul>
+
+    <div class="about-mobile">
+      <h2>Frases</h2>
+      <h2>Autor</h2>
+      <h3>Anderson</h3>
+      <div class="ferramentas">
+        <h2>Ferramentas</h2>
+        <h4>JavaScript</h4>
+        <h4>SASS</h4>
+        <h4>CSS</h4>
+        <h4>HTML5</h4>
+      </div>
+    </div>
+
+    <div class="contact-mobile">
+      <h2>Contatos</h2>
+      <a href="https://github.com/andersonstack">GitHub</a>
+      <a href="https://www.linkedin.com/in/anderson-gabriel-pc/">Linkedin</a>
+      <a href="mailto:andersong.pereiracruz@gmail.com">Email</a>
+    </div>
 
     <footer>
       <div class="direitos">
@@ -64,11 +84,21 @@
     <script src="./app/index.js"></script>
 
     <script>
-      let btn = document
-        .querySelector("#reload")
-        .addEventListener("click", async () => {
-          await ReloadController.recarregar();
-        });
+      let $ = document.querySelector.bind(document);
+
+      // let btn = $("#reload").addEventListener("click", async () => {
+      //   await ReloadController.recarregar();
+      // });
+
+      $("#about").addEventListener("click", function () {
+        const aboutMobile = document.querySelector(".about-mobile");
+        aboutMobile.classList.toggle("expanded");
+      });
+
+      $("#contacts").addEventListener("click", function () {
+        const aboutMobile = document.querySelector(".contact-mobile");
+        aboutMobile.classList.toggle("expanded");
+      });
     </script>
   </body>
 </html>
