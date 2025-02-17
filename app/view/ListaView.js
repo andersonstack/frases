@@ -15,10 +15,6 @@ class ListaView {
           <img src="../../assets/delete.svg" />
           <p>Apagar</p>
         </button>
-        <button class="visualizar" id="${id}">
-          <img src="../../assets/view.png" />
-          <p>Visualizar</p>
-        </button>
       </div>
     `;
 

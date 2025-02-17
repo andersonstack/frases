@@ -35,10 +35,10 @@ class FraseController {
     this._listaView = new ListaView(this._fraseLista);
 
     // Garante que o botão está no DOM antes de adicionar o evento
-    this._adicionarEvento();
+    this._adicionarEvento($);
   }
 
-  _adicionarEvento() {
+  _adicionarEvento($) {
     if (this._btnSalvar) {
       $("#salvar").addEventListener("click", (event) => {
         if (event.target.id === "salvar") {
