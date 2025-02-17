@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* 
  * https://github.com/jtrost/Complete-CSS-Reset
 */
@@ -297,4 +298,46 @@ li {
 }
 .button-reload:active img {
   animation: rotate-click 2s linear 1;
+}
+
+.div-principal {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.salvar {
+  padding: 1rem;
+  margin: 1rem;
+  width: 100%;
+  text-align: center;
+  border-radius: 0;
+}
+
+.frase {
+  margin: 1rem;
+  z-index: 2;
+  transition: transform 2s ease, all 2s ease;
+}
+.frase:hover, .frase:active {
+  font-family: "Poppins", sans-serif;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.5rem;
+  /* Aplica nova fonte ao próprio texto */
+}
+.frase:hover::after, .frase:active::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px); /* Aplica o desfoque */
+  background: rgba(255, 255, 255, 0.1); /* Adiciona um leve escurecimento */
+  pointer-events: none; /* Permite interações normais */
+  z-index: -1; /* Coloca o blur abaixo do texto */
 }/*# sourceMappingURL=styles.css.map */

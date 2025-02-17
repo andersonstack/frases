@@ -5,7 +5,7 @@ class ListaView {
 
   _template(frase, id) {
     return `
-      <li class="frase" id="${id}">${frase} 
+      <li class="frase-lista" id="${id}">${frase} 
         <div class="acoes">
           <button class="apagar" id="${id}">Apagar</button>
           <button class="visualizar" id="${id}">Visualizar</button>
