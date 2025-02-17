@@ -34,6 +34,13 @@ class ListaView {
   }
 
   update(frase, id) {
+    // Verificação se a frase já existe
+    const item = document.getElementById(`item-${id}`);
+    if (item) {
+      item.querySelector(".frase-principal").textContent = frase;
+      return;
+    }
+
     const novoItem = this._template(frase, id);
     this._lista.appendChild(novoItem); // Adiciona a nova frase na lista
   }
