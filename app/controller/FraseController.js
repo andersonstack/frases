@@ -17,11 +17,17 @@ class FraseController {
     this._btnSalvar = $("#salvar");
     this._btnAbout = $("#about");
     this._btnContacts = $("#contacts");
+    this._btnReload = $("#reload");
 
     this._btnAbout.addEventListener("click", () => {
       const aboutMobile = $(".about-mobile");
       aboutMobile.classList.toggle("expanded");
     });
+
+    this._btnReload.addEventListener("click", async () => {
+      await ReloadController.recarregar();
+    });
+
     this._btnContacts.addEventListener("click", () => {
       const aboutMobile = $(".contact-mobile");
       aboutMobile.classList.toggle("expanded");

@@ -444,7 +444,7 @@ li {
 .lista {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 1rem;
   overflow: auto;
@@ -469,6 +469,7 @@ li {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+  max-width: 80%;
 }
 .frase-lista p {
   display: none;
@@ -493,6 +494,10 @@ li {
 @media screen and (min-width: 720px) {
   .lista {
     max-height: 20rem;
+    max-width: 100%;
+  }
+  .frase-lista {
+    width: 100%;
   }
 }
 footer {

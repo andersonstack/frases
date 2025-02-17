@@ -21,7 +21,7 @@
 }
 
 .lista {
-  @include displayFlex(center, center, 1rem, column);
+  @include displayFlex(space-between, center, 1rem, column);
   overflow: auto;
   max-height: 35rem;
 }
@@ -40,6 +40,7 @@
 
 .frase-lista {
   @include displayFlex(space-between, center, 1rem);
+  max-width: 80%;
 
   p {
     display: none;
@@ -67,5 +68,10 @@
 @media screen and (min-width: 720px) {
   .lista {
     max-height: 20rem;
+    max-width: 100%;
+  }
+
+  .frase-lista {
+    width: 100%;
   }
 }
