@@ -1,4 +1,5 @@
 @use "../utils/mixins" as *;
+@use "../utils/variaveis" as *;
 
 .div-principal {
   @include displayFlex(center, center, 0.5rem, column-reverse);
@@ -10,6 +11,42 @@
   width: 100%;
   text-align: center;
   border-radius: 0;
+  display: inline-block;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: all 0.3s;
+  position: relative;
+  z-index: 1;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: $cor-quaternaria;
+    z-index: -1;
+    transition: width 0.3s ease-in-out; /* Adiciona a transição */
+  }
+
+  &:hover,
+  &:active {
+    &:before {
+      width: 100%;
+    }
+  }
 }
 
 .frase {
@@ -30,7 +67,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(5px); /* Aplica o desfoque */
+    backdrop-filter: blur(2px); /* Aplica o desfoque */
     background: rgba(255, 255, 255, 0.1); /* Adiciona um leve escurecimento */
     pointer-events: none; /* Permite interações normais */
     z-index: -1; /* Coloca o blur abaixo do texto */
