@@ -24,7 +24,7 @@ class ListaView {
       <h2 class="frase-principal">${frase}</h2> 
       <div class="acoes">
         <button class="apagar">
-          <img src="../../assets/delete.png" />
+          <img src="./assets/delete.png" />
           <p>Apagar</p>
         </button>
       </div>
